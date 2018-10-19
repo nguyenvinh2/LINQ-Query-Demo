@@ -39,7 +39,10 @@ namespace Lab08LINQ
       RedoNoDuplicates(noBlankNeighborhoods);
       Console.ReadKey();
     }
-
+    /// <summary>
+    /// parses through JSON file to return it in object form
+    /// </summary>
+    /// <returns>Answer object containing same data</returns>
     static Answers GetJSON()
     {
       string path = "../../../../data.json";

@@ -31,6 +31,9 @@ namespace Lab08LINQ.Classes
     /// </summary>
     [JsonProperty("geometry")]
     public Geometry Geometry { get; set; }
+    /// <summary>
+    /// this is the object with the neighborhood property in it
+    /// </summary>
     [JsonProperty("properties")]
     public Property Properties { get; set; }
   }

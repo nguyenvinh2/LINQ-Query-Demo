@@ -113,9 +113,9 @@ namespace Lab08LINQ
     static List<string> AllInOneQuery(Answers myAnswers)
     {
       var noBlanksOrDuplicates = (from result in myAnswers.Features
-                                  where result.Properties.Neigborhood != ""
+                                  where       result.Properties.Neigborhood != ""
                                   select result.Properties.Neigborhood)
-                                  .Distinct().ToList<string>();
+                                  .GroupBy(x => x).Select(x => x.First()).ToList<string>();
 
       foreach (var item in noBlanksOrDuplicates)
       {
